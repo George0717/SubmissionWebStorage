@@ -134,40 +134,40 @@ let render = () => {
 
 const notFound = document.querySelector("#notFound");
 const munculNotFound = () => {
-  notFound.classList.remove("hilang");
+  notFound.classList.remove("hidden");
   notFound.classList.add("muncul");
   setTimeout(() => {
-    notFound.classList.add("hilang");
+    notFound.classList.add("hidden");
     notFound.classList.remove("muncul");
   }, 2000);
 };
 
 const bookAdded = document.querySelector("#bookAdded");
 const munculBookAdded = () => {
-  bookAdded.classList.remove("hilang");
+  bookAdded.classList.remove("hidden");
   bookAdded.classList.add("muncul");
   setTimeout(() => {
-    bookAdded.classList.add("hilang");
+    bookAdded.classList.add("hidden");
     bookAdded.classList.remove("muncul");
   }, 2000);
 };
 
 const bookMoved = document.querySelector("#bookMoved");
 const munculBookMoved = () => {
-  bookMoved.classList.remove("hilang");
+  bookMoved.classList.remove("hidden");
   bookMoved.classList.add("muncul");
   setTimeout(() => {
-    bookMoved.classList.add("hilang");
+    bookMoved.classList.add("hidden");
     bookMoved.classList.remove("muncul");
   }, 2000);
 };
 
 const bookDeleted = document.querySelector("#bookDeleted");
 const munculBookDeleted = () => {
-  bookDeleted.classList.remove("hilang");
+  bookDeleted.classList.remove("hidden");
   bookDeleted.classList.add("muncul");
   setTimeout(() => {
-    bookDeleted.classList.add("hilang");
+    bookDeleted.classList.add("hidden");
     bookDeleted.classList.remove("muncul");
   }, 2000);
 };

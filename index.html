@@ -4,66 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>rakbuku.id</title>
+    <title>Perpustakaan</title>
+    <link rel="icon" href="img/buku.png" />
   </head>
   <body>
     <section id="notFound" class="pop-up-red hilang">
-      <h1>Waduh bukunya nggak ada nih. . .</h1>
-    </section>
-    <section id="bookAdded" class="pop-up-green hilang">
-      <h1>Berhasil Ditambahkan</h1>
-    </section>
-    <section id="bookMoved" class="pop-up-green hilang">
-      <h1>Berhasil Dipindahkan</h1>
-    </section>
-    <section id="bookDeleted" class="pop-up-red hilang">
-      <h1>Berhasil Dihapus</h1>
+      <h1>Bukunya tidak ada</h1>
     </section>
     <header>
-      <div id="header-title">
-        <h1>rakbuku.id</h1>
-      </div>
-      <div id="search-section">
-        <form id="searchBook">
-          <input id="searchBookTitle" type="text" placeholder="Judul. . ." required />
-          <button id="searchSubmit" type="submit">Cari</button>
-        </form>
+      <div class="header-title">
+        <h1>Tempat Peminjaman Buku</h1>
       </div>
     </header>
 
     <main>
-      <section class="book-shelf">
+      <section class="perpustakaan">
         <h1>Belum Dibaca</h1>
-        <div id="uncompletedBookshelfList" class="book-list">
-          <!-- <article class="book-item">
-                    <h3>Judul</h3>
-                    <p>Penulis : penulis</p>
-                    <p>Tahun : tahun</p>
-                    <div class="action">
-                        <button class="green">Udah Dibaca</button>
-                        <button class="red">Hapus Buku</button>
-                    </div>
-                </article> -->
-        </div>
+        <div id="uncompletedBookshelfList" class="book-list"></div>
       </section>
       <section class="form-container">
         <h1>Taruh Ke Rak Buku</h1>
         <form id="bookForm">
           <div class="input">
             <label id="label-judul" for="input-judul">Judul</label>
-            <input id="input-judul" type="text" placeholder="Harry Potter" required />
+            <input id="input-judul" type="text" required />
           </div>
           <div class="input">
             <label id="label-penulis" for="input-penulis">Penulis</label>
-            <input id="input-penulis" type="text" placeholder="J.K Rowling" required />
+            <input id="input-penulis" type="text" required />
           </div>
           <div class="input">
             <label id="label-tahun" for="input-tahun">Tahun</label>
-            <input id="input-tahun" type="number" placeholder="2003" required />
+            <input id="input-tahun" type="number" required />
           </div>
           <div class="input">
             <label id="label-isCompleted" for="check-ifCcompleted">Udah Dibaca ?</label>
@@ -75,20 +48,15 @@
 
       <section class="book-shelf" id="completed">
         <h1>Udah dibaca</h1>
-        <div id="completedBookshelfList" class="book-list">
-          <!-- <article class="book-item">
-                    <h3>Judul</h3>
-                    <p>Penulis : penulis</p>
-                    <p>Tahun : tahun</p>
-                    <div class="action">
-                        <button class="green">Belum Dibaca</button>
-                        <button class="red">Hapus Buku</button>
-                    </div>
-                </article> -->
-        </div>
+        <div id="completedBookshelfList" class="book-list"></div>
       </section>
     </main>
-
+    <div id="search-section">
+      <form id="searchBook">
+        <input id="searchBookTitle" type="text" placeholder="Judul. . ." required />
+        <button id="searchSubmit" type="submit">Cari</button>
+      </form>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
