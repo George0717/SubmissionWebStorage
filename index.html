@@ -9,22 +9,49 @@
     <link rel="icon" href="img/buku.png" />
   </head>
   <body>
+    <!-- Awal dari Pop Up Click -->
     <section id="notFound" class="pop-up-red hilang">
-      <h1>Bukunya tidak ada</h1>
+      <h1>Buku Tidak Ditemukan</h1>
     </section>
+    <section id="bookAdded" class="pop-up-green hilang">
+      <h1>Berhasil Ditambahkan</h1>
+    </section>
+    <section id="bookMoved" class="pop-up-green hilang">
+      <h1>Berhasil Dipindahkan</h1>
+    </section>
+    <section id="bookDeleted" class="pop-up-red hilang">
+      <h1>Berhasil Dihapus</h1>
+    </section>
+    <!-- Akhir dari Pop Up Click -->
+
+    <!-- Awal Header -->
     <header>
       <div class="header-title">
         <h1>Tempat Peminjaman Buku</h1>
       </div>
     </header>
+    <!-- Akhir Header -->
 
+    <!-- Awal Belum Selesai Dibaca -->
     <main>
-      <section class="perpustakaan">
-        <h1>Belum Dibaca</h1>
-        <div id="uncompletedBookshelfList" class="book-list"></div>
+      <section class="book-shelf">
+        <h1>Belum Selesai Dibaca</h1>
+        <div id="uncompletedBookshelfList" class="book-list">
+          <!-- <article class="book-item">
+                  <h3>Judul</h3>
+                  <p>Penulis : penulis</p>
+                  <p>Tahun : tahun</p>
+                  <div class="action">
+                      <button class="green">Udah Dibaca</button>
+                      <button class="red">Hapus Buku</button>
+                  </div>
+              </article> -->
+        </div>
       </section>
+      <!-- Akhir Belum Selesai Dibaca -->
+
       <section class="form-container">
-        <h1>Taruh Ke Rak Buku</h1>
+        <h1>Masukkan Ke Rak Buku</h1>
         <form id="bookForm">
           <div class="input">
             <label id="label-judul" for="input-judul">Judul</label>
@@ -39,24 +66,48 @@
             <input id="input-tahun" type="number" required />
           </div>
           <div class="input">
-            <label id="label-isCompleted" for="check-ifCcompleted">Udah Dibaca ?</label>
+            <label id="label-isCompleted" for="check-ifCcompleted">Sudah Dibaca ?</label>
             <input type="checkbox" id="check-ifCompleted" />
           </div>
-          <button type="submit" id="bookSubmit">Taruh</button>
+          <button type="submit" id="bookSubmit">Letakkan</button>
         </form>
       </section>
 
+      <!-- Awal Sudah selesai Dibaca -->
       <section class="book-shelf" id="completed">
-        <h1>Udah dibaca</h1>
-        <div id="completedBookshelfList" class="book-list"></div>
+        <h1>Selesai Dibaca</h1>
+        <div id="completedBookshelfList" class="book-list">
+          <!-- <article class="book-item">
+                  <h3>Judul</h3>
+                  <p>Penulis : penulis</p>
+                  <p>Tahun : tahun</p>
+                  <div class="action">
+                      <button class="green">Belum Dibaca</button>
+                      <button class="red">Hapus Buku</button>
+                  </div>
+              </article> -->
+        </div>
       </section>
     </main>
-    <div id="search-section">
+    <!-- Akhir Sudah Selesai Dibaca -->
+
+    <!-- Awal Search Section -->
+    <div class="search-section">
       <form id="searchBook">
-        <input id="searchBookTitle" type="text" placeholder="Judul. . ." required />
-        <button id="searchSubmit" type="submit">Cari</button>
+        <h2>Cari Buku</h2>
+        <input id="searchBookTitle" type="text" required />
+        <button id="searchSubmit" type="submit">Search</button>
       </form>
     </div>
+    <!-- Akhir Search Section -->
+
+    <!-- Awal Footer -->
+    <footer class="footer">
+      <p>&copy; Raden George Samuel Budi | <a href="https://github.com/George0717">Github</a></p>
+    </footer>
+
+    <!-- Akhir Footer -->
+
     <script src="js/script.js"></script>
   </body>
 </html>

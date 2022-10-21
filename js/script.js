@@ -132,46 +132,50 @@ let render = () => {
   }
 };
 
+// Buku tidak ditemukan di dalam rak
 const notFound = document.querySelector("#notFound");
 const munculNotFound = () => {
-  notFound.classList.remove("hidden");
+  notFound.classList.remove("hilang");
   notFound.classList.add("muncul");
   setTimeout(() => {
-    notFound.classList.add("hidden");
+    notFound.classList.add("hilang");
     notFound.classList.remove("muncul");
-  }, 2000);
+  }, 1000);
 };
 
+// Menambahkan Buku
 const bookAdded = document.querySelector("#bookAdded");
 const munculBookAdded = () => {
-  bookAdded.classList.remove("hidden");
+  bookAdded.classList.remove("hilang");
   bookAdded.classList.add("muncul");
   setTimeout(() => {
-    bookAdded.classList.add("hidden");
+    bookAdded.classList.add("hilang");
     bookAdded.classList.remove("muncul");
-  }, 2000);
+  }, 1000);
 };
 
+// Buku Berhasil Dipindahkan
 const bookMoved = document.querySelector("#bookMoved");
 const munculBookMoved = () => {
-  bookMoved.classList.remove("hidden");
+  bookMoved.classList.remove("hilang");
   bookMoved.classList.add("muncul");
   setTimeout(() => {
-    bookMoved.classList.add("hidden");
+    bookMoved.classList.add("hilang");
     bookMoved.classList.remove("muncul");
-  }, 2000);
+  }, 1000);
 };
 
 const bookDeleted = document.querySelector("#bookDeleted");
 const munculBookDeleted = () => {
-  bookDeleted.classList.remove("hidden");
+  bookDeleted.classList.remove("hilang");
   bookDeleted.classList.add("muncul");
   setTimeout(() => {
-    bookDeleted.classList.add("hidden");
+    bookDeleted.classList.add("hilang");
     bookDeleted.classList.remove("muncul");
-  }, 2000);
+  }, 1000);
 };
 
+// Mencari Buku / Search Button
 const searchBookTitle = document.querySelector("#searchBookTitle");
 let cari = () => {
   uncompletedBookshelf = document.querySelector("#uncompletedBookshelfList");
@@ -225,19 +229,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   bookSubmit = document.querySelector("#bookForm");
-  bookSubmit.addEventListener("submit", function (e) {
-    e.preventDefault();
+  bookSubmit.addEventListener("submit", function (event) {
+    event.preventDefault();
     addBook();
     munculBookAdded();
   });
   const searchBook = document.querySelector("#searchBook");
-  searchBook.addEventListener("submit", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+  searchBook.addEventListener("submit", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
     cari();
   });
-  searchBookTitle.addEventListener("input", (e) => {
-    if (e.target.value == "") {
+  searchBookTitle.addEventListener("input", (event) => {
+    if (event.target.value == "") {
       render();
     }
   });
